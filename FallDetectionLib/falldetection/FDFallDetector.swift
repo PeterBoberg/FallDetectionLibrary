@@ -27,7 +27,7 @@ public class FDFallDetector: NSObject {
     private var fallDetectionReported = false
     private let bag = DisposeBag()
 
-    override init() {
+    public override init() {
         self.accelerationProvider = FDAccelerometerProviderImpl.shared
         self.classificationEngine = FDClassificationEngineImpl.shared
         self.ringBuffer = FDRingBuffer(capacity: FDConstants.ringBufferCapacity(), frequency: FDConstants.frequency())
